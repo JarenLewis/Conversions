@@ -116,3 +116,38 @@ public class Main {
     }
 
 }
+
+
+//public static void main(String[] args) {
+//
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.println("What would you like to convert to? (F/C)");
+//        String userInput = input.nextLine().toUpperCase();
+//
+//        if (userInput.equals("F")) {
+//            System.out.println("What temperature in Celsius would you like to convert to Fahrenheit?");
+//
+//        } else if (userInput.equals("C")) {
+//            System.out.println("What temperature in Fahrenheit would you like to convert to Celsius?");
+//        }
+//        double userInputTemp = input.nextDouble();
+//
+//        if (userInput.equals("F")) {
+//            System.out.println(userInputTemp + "°" + "C is " + celsiusToFahrenheit(userInputTemp) + "°" + "F");
+//        } else if (userInput.equals("C")) {
+//            System.out.println(userInputTemp + "°" + "F is " + fahrenheitToCelsius(userInputTemp) + "°" + "C");
+//        }
+//    }
+//
+//        public static double fahrenheitToCelsius (double fahrenheit) {
+//
+//        double celsiusTemp = (fahrenheit - 32) / 1.8;
+//        return celsiusTemp;
+//        }
+//
+//        public static double celsiusToFahrenheit (double celsius) {
+//
+//            double fahrenheitTemp = celsius * 1.8 + 32;
+//            return fahrenheitTemp;
+//        }
