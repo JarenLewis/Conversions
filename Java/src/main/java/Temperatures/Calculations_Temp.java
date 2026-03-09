@@ -1,6 +1,6 @@
 package Temperatures;
 
-public class Calculations {
+public class Calculations_Temp {
     public static double celsiusToFahrenheit(double celsius) {
         double calculatedFahrenheit = (celsius * 1.8) + 32;
         return calculatedFahrenheit;

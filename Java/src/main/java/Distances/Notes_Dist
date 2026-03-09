@@ -1,0 +1,9 @@
+         % start of the format specifier
+        . number of decimal places
+        2 (ex) two decimal places displayed
+        f floating point numbers
+
+        %.2f is the whole placeholder
+
+       First placeholder is for length variable
+       Second placeholder is for result variable

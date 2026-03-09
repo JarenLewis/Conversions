@@ -1,3 +1,6 @@
+import Distances.Calculations_Dist;
+import Distances.Prompts_Dist;
+
 import java.util.Scanner;
 
 public class Distance {
@@ -8,56 +11,56 @@ public class Distance {
 
         while (true) {
 
-            System.out.println("What do want to convert? (M)iles or (K)ilometers");
-            String lengthBeingConverted = input.nextLine().toUpperCase();
+            System.out.println("What do want to convert?");
+            Prompts_Dist.startingPrompt();
 
-            System.out.println("What is the length?");
-            double length = input.nextDouble();
-            input.nextLine();
+            String lengthScaleBeingConverted = input.nextLine().toUpperCase();
+            System.out.println("");
 
-            System.out.println("What do want to convert " + length + " " + lengthBeingConverted + " to? (M)iles or (K)ilometers");
-            String lengthConvertedTo = input.nextLine().toUpperCase();
+            if (!lengthScaleBeingConverted.equals("M") && !lengthScaleBeingConverted.equals("K") && !lengthScaleBeingConverted.equals("F")) {
+                System.out.println("Unsupported input. Please try again.");
+                System.out.println("");
+                continue;
+            }
 
-//        if (lengthConvertedTo.equals("M")) {
-//            double result = kilometersToMiles(length);
-//            System.out.println(length + " kilometers is " + result + " miles");
-//        }
-//        else if (lengthConvertedTo.equals("K")) {
-//            double result = milesToKilometers(length);
-//            System.out.println(length + " miles is " + result + " kilometers");
-//        }
-            if (lengthConvertedTo.equals("M")) {
-                double result = kilometersToMiles(length);
-                System.out.println(String.format("%.2f kilometers is %.2f miles", length, result));
-            } else if (lengthConvertedTo.equals("K")) {
-                double result = milesToKilometers(length);
-                System.out.println(String.format("%.2f miles is %.2f kilometers", length, result));
+            while (true) {
+
+                System.out.println("What is the length?");
+
+                if (!input.hasNextDouble()) {
+                    System.out.println("Unsupported input. Please input a number.");
+                    System.out.println("");
+                    input.nextLine();
+                    continue;
+                }
+
+                String length = String.valueOf(Double.parseDouble(input.nextLine()));
+                System.out.println("");
+
+                double startingLength = Double.parseDouble(length);
+
+//
+                while (true) {
+
+                    System.out.println("What length do you want to convert to?");
+                    Prompts_Dist.lengthPrompt(lengthScaleBeingConverted);
+
+                    String lengthConvertedTo = input.nextLine().toUpperCase();
+                    System.out.println("");
+                    Prompts_Dist.calculationPrompt(lengthScaleBeingConverted, lengthConvertedTo, startingLength);
+                    System.out.println("");
+                    break;
+                }
+                System.out.println("Do you want to convert another length? (Y/N)");
+
+                String answer = input.nextLine().toUpperCase();
+
+                if (!answer.equals("Y")) {
+                    return;
+                }
+                else break;
             }
             System.out.println("");
         }
-        /*
-        % start of the format specifier
-        . number of decimal places
-        2 (ex) two decimal places displayed
-        f floating point numbers
-
-        %.2f is the whole placeholder
-
-       First placeholder is for length variable
-       Second placeholder is for result variable
-         */
-    }
-
-    static final double MILES_PER_KILOMETER = .621371;
-
-    public static double milesToKilometers(double miles) {
-        return miles / MILES_PER_KILOMETER;
-    }
-
-    public static double kilometersToMiles(double kilometers) {
-        return kilometers * MILES_PER_KILOMETER;
     }
 }
-
-//Add other measurements
-//error handling
