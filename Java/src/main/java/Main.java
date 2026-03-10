@@ -40,10 +40,10 @@
 //
 //
 //                if (beginningConversionUnit.equals("miles") && (endingNumber.equals("kilometers") || endingNumber.equals("km"))) {
-//                    double result = Distance.milesToKilometers(startingNumber);
+//                    double result = Distances.Distance.milesToKilometers(startingNumber);
 //                    System.out.println(beginningNumber + " " + beginningConversionUnit + " is " + result + " kilometers");
 //                } else if (beginningConversionUnit.equals("kilometers") && endingNumber.equals("miles")) {
-//                    double result = Distance.kilometersToMiles(startingNumber);
+//                    double result = Distances.Distance.kilometersToMiles(startingNumber);
 //                    System.out.println(startingNumber + " " + beginningConversionUnit + " equals " + result + " " + endingNumber);
 //                }
 //                else {
@@ -61,22 +61,22 @@
 //                String endingScale = input.nextLine();
 //
 //                if (beginningConversionUnit.equals("f") && endingScale.equals("c")) {
-//                    double result = Temperature.fahrenheitToCelsius(startingNumber);
+//                    double result = Temperatures.Temperature.fahrenheitToCelsius(startingNumber);
 //                    System.out.println(beginningNumber + "°F is " + result + "°C");
 //                } else if (beginningConversionUnit.equals("c") && endingScale.equals("f")) {
-//                    double result = Temperature.celsiusToFahrenheit(startingNumber);
+//                    double result = Temperatures.Temperature.celsiusToFahrenheit(startingNumber);
 //                    System.out.println(beginningNumber + "°C is " + result + "°F");
 //                } else if (beginningConversionUnit.equals("k") && endingScale.equals("c")) {
-//                    double result = Temperature.kelvinToCelsius(startingNumber);
+//                    double result = Temperatures.Temperature.kelvinToCelsius(startingNumber);
 //                    System.out.println(beginningNumber + "°K is " + result + "°C");
 //                } else if (beginningConversionUnit.equals("f") && endingScale.equals("k")) {
-//                    double result = Temperature.fahrenheitToKelvin(startingNumber);
+//                    double result = Temperatures.Temperature.fahrenheitToKelvin(startingNumber);
 //                    System.out.println(beginningNumber + "°F is " + result + "°K");
 //                } else if (beginningConversionUnit.equals("c") && endingScale.equals("k")) {
-//                    double result = Temperature.celsiusToKelvin(startingNumber);
+//                    double result = Temperatures.Temperature.celsiusToKelvin(startingNumber);
 //                    System.out.println(beginningNumber + "°C is " + result + "°K");
 //                } else if (beginningConversionUnit.equals("k") && endingScale.equals("f")) {
-//                    double result = Temperature.kelvinToFahrenheit(startingNumber);
+//                    double result = Temperatures.Temperature.kelvinToFahrenheit(startingNumber);
 //                    System.out.println(beginningNumber + "°K is " + result + "°F");
 //                }
 //                else {

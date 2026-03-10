@@ -1,6 +1,6 @@
 package Distances;
 
-public class Calculations_Dist {
+public class Dist_Calculations {
 
     static final double MILES_PER_KILOMETER = .621371;
     static final double FEET_PER_MILES = 5280;

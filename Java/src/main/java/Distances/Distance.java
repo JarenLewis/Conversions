@@ -1,5 +1,4 @@
-import Distances.Calculations_Dist;
-import Distances.Prompts_Dist;
+package Distances;
 
 import java.util.Scanner;
 
@@ -12,7 +11,7 @@ public class Distance {
         while (true) {
 
             System.out.println("What do want to convert?");
-            Prompts_Dist.startingPrompt();
+            Dist_Prompts.startingPrompt();
 
             String lengthScaleBeingConverted = input.nextLine().toUpperCase();
             System.out.println("");
@@ -43,11 +42,11 @@ public class Distance {
                 while (true) {
 
                     System.out.println("What length do you want to convert to?");
-                    Prompts_Dist.lengthPrompt(lengthScaleBeingConverted);
+                    Dist_Prompts.lengthPrompt(lengthScaleBeingConverted);
 
                     String lengthConvertedTo = input.nextLine().toUpperCase();
                     System.out.println("");
-                    Prompts_Dist.calculationPrompt(lengthScaleBeingConverted, lengthConvertedTo, startingLength);
+                    Dist_Prompts.calculationPrompt(lengthScaleBeingConverted, lengthConvertedTo, startingLength);
                     System.out.println("");
                     break;
                 }

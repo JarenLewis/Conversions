@@ -1,6 +1,6 @@
 package Distances;
 
-public class Prompts_Dist {
+public class Dist_Prompts {
 
     public static String startingPrompt() {
 
@@ -37,26 +37,26 @@ public class Prompts_Dist {
 
         switch (comparingScales) {
             case "M to K":
-                result = Calculations_Dist.milesToKilometers(length);
+                result = Dist_Calculations.milesToKilometers(length);
                 System.out.println(String.format("%.2f miles is %.2f kilometers", length, result));
                 break;
             case "K to M":
-                result = Calculations_Dist.kilometersToMiles(length);
+                result = Dist_Calculations.kilometersToMiles(length);
                 System.out.println(String.format("%.2f kilometers is %.2f miles", length, result));
                 break;
             case "M to F":
-                result = Calculations_Dist.milesToFeet(length);
+                result = Dist_Calculations.milesToFeet(length);
                 System.out.println(String.format("%.2f miles is %.2f feet", length, result));
                 break;
             case "F to M":
-                result = Calculations_Dist.feetToMiles(length);
+                result = Dist_Calculations.feetToMiles(length);
                 System.out.println(String.format("%.2f feet is %.2f miles", length, result));
                 break;
             case "K to F":
-                result = Calculations_Dist.kilometersToFeet(length);
+                result = Dist_Calculations.kilometersToFeet(length);
                 System.out.println(String.format("%.2f kilometers is %.2f feet", length, result));
             case "F to K":
-                result = Calculations_Dist.feetToKilometers(length);
+                result = Dist_Calculations.feetToKilometers(length);
                 System.out.println(String.format("%.2f feet is %.2f kilometers", length, result));
             default:
                 System.out.println("Unsupported input. Please try again.");
