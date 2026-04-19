@@ -1,6 +1,9 @@
-package Binary;
+package binary;
 
-public class Binary_Calculations {
+public class BinaryCalculations {
+
+    private BinaryCalculations() {}
+
     public static String base10ToBase2(int chosenNumber) {
 
         StringBuilder binaryString = new StringBuilder();

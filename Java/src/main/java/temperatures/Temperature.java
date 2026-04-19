@@ -1,4 +1,4 @@
-package Temperatures;
+package temperatures;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class Temperature {
 
         while (true) {
             System.out.println("What temperature scale would you like to start with?");
-            Temp_Prompts.startingScalePrompt();
+            TempPrompts.startingScalePrompt();
 
             String startingScale = input.nextLine().toUpperCase();
             System.out.println("");
@@ -33,14 +33,14 @@ public class Temperature {
 
                 String startingTemp = String.valueOf(Double.parseDouble(input.nextLine()));
                 System.out.println("");
-                Temp_Prompts.endingScalePrompt(startingScale);
+                TempPrompts.endingScalePrompt(startingScale);
 
 
                 double startingTempCalc = Double.parseDouble(startingTemp);
 
                 while (true) {
                     String endingScale = input.nextLine().toUpperCase();
-                    Temp_Prompts.calculationPrompt(startingScale, endingScale, startingTempCalc, startingTemp);
+                    TempPrompts.calculationPrompt(startingScale, endingScale, startingTempCalc, startingTemp);
                     break;
                 }
                 System.out.println("");

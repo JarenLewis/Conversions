@@ -1,6 +1,6 @@
-package Distances;
+package distances;
 
-public class Dist_Prompts {
+public class DistPrompts {
 
     public static String startingPrompt() {
 
@@ -37,27 +37,29 @@ public class Dist_Prompts {
 
         switch (comparingScales) {
             case "M to K":
-                result = Dist_Calculations.milesToKilometers(length);
+                result = DistCalculations.milesToKilometers(length);
                 System.out.println(String.format("%.2f miles is %.2f kilometers", length, result));
                 break;
             case "K to M":
-                result = Dist_Calculations.kilometersToMiles(length);
+                result = DistCalculations.kilometersToMiles(length);
                 System.out.println(String.format("%.2f kilometers is %.2f miles", length, result));
                 break;
             case "M to F":
-                result = Dist_Calculations.milesToFeet(length);
+                result = DistCalculations.milesToFeet(length);
                 System.out.println(String.format("%.2f miles is %.2f feet", length, result));
                 break;
             case "F to M":
-                result = Dist_Calculations.feetToMiles(length);
+                result = DistCalculations.feetToMiles(length);
                 System.out.println(String.format("%.2f feet is %.2f miles", length, result));
                 break;
             case "K to F":
-                result = Dist_Calculations.kilometersToFeet(length);
+                result = DistCalculations.kilometersToFeet(length);
                 System.out.println(String.format("%.2f kilometers is %.2f feet", length, result));
+                break;
             case "F to K":
-                result = Dist_Calculations.feetToKilometers(length);
+                result = DistCalculations.feetToKilometers(length);
                 System.out.println(String.format("%.2f feet is %.2f kilometers", length, result));
+                break;
             default:
                 System.out.println("Unsupported input. Please try again.");
         }

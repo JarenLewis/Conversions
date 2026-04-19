@@ -1,6 +1,6 @@
-package Temperatures;
+package temperatures;
 
-public class Temp_Prompts {
+public class TempPrompts {
 
     public static String startingScalePrompt() {
         System.out.println("(F)ahrenheit");
@@ -36,33 +36,33 @@ public class Temp_Prompts {
 
         switch (comparingScales) {
             case "F to C":
-                result = Temp_Calculations.fahrenheitToCelsius(startingTempCalc);
+                result = TempCalculations.fahrenheitToCelsius(startingTempCalc);
                 System.out.println(startingTemp + "°F is " + result + "°C");
                 break;
             case "C to F":
-                result = Temp_Calculations.celsiusToFahrenheit(startingTempCalc);
+                result = TempCalculations.celsiusToFahrenheit(startingTempCalc);
                 System.out.println(startingTemp + "°C is " + result + "°F");
                 break;
             case "K to C":
-                result = Temp_Calculations.kelvinToCelsius(startingTempCalc);
+                result = TempCalculations.kelvinToCelsius(startingTempCalc);
                 System.out.println(startingTemp + "°K is " + result + "°C");
                 break;
             case "F to K":
-                result = Temp_Calculations.fahrenheitToKelvin(startingTempCalc);
+                result = TempCalculations.fahrenheitToKelvin(startingTempCalc);
                 System.out.println(startingTemp + "°F is " + result + "°K");
                 break;
             case "C to K":
-                result = Temp_Calculations.celsiusToKelvin(startingTempCalc);
+                result = TempCalculations.celsiusToKelvin(startingTempCalc);
                 System.out.println(startingTemp + "°C is " + result + "°K");
                 break;
             case "K to F":
-                result = Temp_Calculations.kelvinToFahrenheit(startingTempCalc);
+                result = TempCalculations.kelvinToFahrenheit(startingTempCalc);
                 System.out.println(startingTemp + "°K is " + result + "°F");
                 break;
             default:
                 System.out.println("Unsupported input. Please try again.");
                 System.out.println("");
-                Temp_Prompts.endingScalePrompt(startingScale);
+                TempPrompts.endingScalePrompt(startingScale);
         }
         return comparingScales;
     }
