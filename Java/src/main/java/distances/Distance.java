@@ -15,7 +15,7 @@ public class Distance {
         Scanner input = new Scanner(System.in);
 
         while (true) {
-            System.out.println("What do want to convert?");
+            System.out.println("What do you want to convert?");
             DistPrompts.startingPrompt();
 
             String lengthScaleBeingConverted = input.nextLine().toUpperCase().trim();
